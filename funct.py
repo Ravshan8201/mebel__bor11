@@ -110,7 +110,7 @@ def next_func(update, context):
     data = cur.execute(select_DATATIME.format(user_id)).fetchall()
     connect.commit()
     tgcheck = cur.execute("""SELECT TG_ID FROM Users_list""").fetchall()
-    print(tgcheck)
+
     try:
         ll = ll [0][0]
         diller_name = diller_name[0][0]
@@ -224,23 +224,22 @@ def next_func(update, context):
 
         cur.execute(stagee.format('{}', user_id).format(6.112))
         connect.commit()
-        print(tovar_list)
+
 
 
         buttons = []
         tovar_list = tovar_list[0]
-        print(tovar_list)
+ 
         def func_chunks_generators(lst, n):
             for i in range(0, len(lst), n):
                 yield lst[i: i + n]
         tovar_list = list(func_chunks_generators(tovar_list,2))
 
-        print(tovar_list)
 
         for e in tovar_list:
             b = []
             for k in e:
-                print(k)
+
                 k = k[0]
                 a = KeyboardButton(text=str(k))
                 b.append(a)
@@ -258,11 +257,12 @@ def next_func(update, context):
 
         cur.execute(stagee.format('{}', user_id).format(6.113))
         connect.commit()
-        print(tovar_list)
+
+        
 
         buttons = []
         tovar_list = tovar_list[0]
-        print(tovar_list)
+
 
         def func_chunks_generators(lst, n):
             for i in range(0, len(lst), n):
@@ -270,12 +270,12 @@ def next_func(update, context):
 
         tovar_list = list(func_chunks_generators(tovar_list, 2))
 
-        print(tovar_list)
+
 
         for e in tovar_list:
             b = []
             for k in e:
-                print(k)
+
                 k = k[0]
                 a = KeyboardButton(text=str(k))
                 b.append(a)
@@ -295,11 +295,11 @@ def next_func(update, context):
 
         cur.execute(stagee.format('{}', user_id).format(6.114))
         connect.commit()
-        print(tovar_list)
+
 
         buttons = []
         tovar_list = tovar_list[0]
-        print(tovar_list)
+
 
         def func_chunks_generators(lst, n):
             for i in range(0, len(lst), n):
@@ -307,12 +307,12 @@ def next_func(update, context):
 
         tovar_list = list(func_chunks_generators(tovar_list, 2))
 
-        print(tovar_list)
+
 
         for e in tovar_list:
             b = []
             for k in e:
-                print(k)
+
                 k = k[0]
                 a = KeyboardButton(text=str(k))
                 b.append(a)
@@ -332,11 +332,11 @@ def next_func(update, context):
 
         cur.execute(stagee.format('{}', user_id).format(6.115))
         connect.commit()
-        print(tovar_list)
+
 
         buttons = []
         tovar_list = tovar_list[0]
-        print(tovar_list)
+
 
         def func_chunks_generators(lst, n):
             for i in range(0, len(lst), n):
@@ -344,12 +344,12 @@ def next_func(update, context):
 
         tovar_list = list(func_chunks_generators(tovar_list, 2))
 
-        print(tovar_list)
+
 
         for e in tovar_list:
             b = []
             for k in e:
-                print(k)
+
                 k = k[0]
                 a = KeyboardButton(text=str(k))
                 b.append(a)
