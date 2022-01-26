@@ -809,7 +809,7 @@ def next_func(update, context):
     for e in tgcheck:
         e = e[0]
         ddd.append(e)
-    print(ddd)
+
     if user_id not in ddd:
         _but = [KeyboardButton(text=dct[lang_][33])]
         context.bot.send_message(text=dct[lang_][33], chat_id=user_id,
