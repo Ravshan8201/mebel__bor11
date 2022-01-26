@@ -1,1 +1,1 @@
-worker: python main.py & wait -n
+web: python main.py 
