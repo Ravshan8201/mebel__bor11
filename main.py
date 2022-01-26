@@ -15,4 +15,23 @@ dis.add_handler(MessageHandler(Filters.contact, get_contac))
 # dis.add_handler(MessageHandler(Filters.location, get_location))
 dis.add_handler(MessageHandler(Filters.photo, adm))
 
+def kill(name, sig=signal.SIGTERM):
+    """Send a signal to job ``name`` via :func:`os.kill`.
+
+    .. versionadded:: 1.29
+
+    Args:
+        name (str): Name of the job
+        sig (int, optional): Signal to send (default: SIGTERM)
+
+    Returns:
+        bool: `False` if job isn't running, `True` if signal was sent.
+    """
+    pid = _job_pid(name)
+    if pid is None:
+        return False
+
+    os.kill(pid, sig)
+    return True 
+
 upd.start_polling(drop_pending_updates=True)
