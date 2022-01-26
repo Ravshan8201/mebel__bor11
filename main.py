@@ -5,6 +5,7 @@ upd = Updater(token=TOKEN, workers=4)
 dis = upd.dispatcher
 dis.add_handler(CommandHandler(command='start', callback=start))
 dis.add_handler(CommandHandler(command='wwwwww', callback=wwwwww))
+dis.add_handler(CommandHandler(command='pp', callback=pp))
 dis.add_handler(CommandHandler(command='get_date', callback=get_date))
 dis.add_handler(CallbackQueryHandler(pattern='ru_change', callback=ru_change))
 dis.add_handler(CallbackQueryHandler(pattern='uz_change', callback=uz_change))
