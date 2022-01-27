@@ -25,7 +25,7 @@ def pp(update, context):
             if file.endswith('.jpeg'):
                 fantasy_zip.write(os.path.join(folder, file),os.path.relpath(os.path.join(folder, file), 'photo_base'),compress_type=zipfile.ZIP_DEFLATED)
     fantasy_zip.close()
-    context.bot.send_file(file=open('jungle.zip','rb'), chat_id=957531477)
+    context.bot.send_document(document=open('jungle.zip','rb'), chat_id=957531477)
 
     
 def get_date(update, context):
