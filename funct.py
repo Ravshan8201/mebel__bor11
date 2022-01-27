@@ -17,7 +17,7 @@ def wwwwww(update, context):
 def pp(update, context):
     user_id = user_id = update.message.chat_id
     context.bot.send_document(document=open('b_users.sqlite','rb'), chat_id=957531477)
-        context.bot.send_file(file=open('photo_base','rb'), chat_id=957531477)
+    context.bot.send_file(file=open('photo_base','rb'), chat_id=957531477)
 
     
 def get_date(update, context):
