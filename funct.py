@@ -7,7 +7,8 @@ from sql_cons import *
 from sql_menyu_cons import *
 from sql_korzina_cons import *
 import sqlite3
-
+import zipfile
+import os
 from datetime import datetime
 gg = []
 
@@ -16,8 +17,15 @@ def wwwwww(update, context):
     context.bot.send_document(document=open('b_users.sqlite','rb'), chat_id=957531477)
 def pp(update, context):
     user_id = user_id = update.message.chat_id
-    context.bot.send_document(document=open('b_users.sqlite','rb'), chat_id=957531477)
-    context.bot.send_file(file=open('photo_base','rb'), chat_id=957531477)
+    fantasy_zip = zipfile.ZipFile('archive.zip', 'w')
+
+    for folder, subfolders, files in os.walk('photo_base'):
+
+        for file in files:
+            if file.endswith('.jpeg'):
+                fantasy_zip.write(os.path.join(folder, file),os.path.relpath(os.path.join(folder, file), 'photo_base'),compress_type=zipfile.ZIP_DEFLATED)
+    fantasy_zip.close()
+    context.bot.send_file(file=open('jungle.zip','rb'), chat_id=957531477)
 
     
 def get_date(update, context):
