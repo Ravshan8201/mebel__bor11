@@ -818,17 +818,7 @@ def next_func(update, context):
 
 
 #     KKOOOORRRRRZZZZIIINNNNAAAA TUGADII
-    ddd = []
-    for e in tgcheck:
-        e = e[0]
-        ddd.append(e)
 
-    if user_id not in ddd:
-        _but = [KeyboardButton(text=dct[lang_][33])]
-        context.bot.send_message(text=dct[lang_][33], chat_id=user_id,
-                                 reply_markup=ReplyKeyboardRemove([_but], resize_keyboard=True,
-                                                                  one_time_keyboard=True))
-    ddd.clear()
 
 
     if user_id in admdict and stage_ ==100 and message == maindct[lang_][4] or user_id in admdict and stage_ ==102 and message == maindct[lang_][4] :
